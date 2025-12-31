@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alphabet Shift</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- participant auth section -->
+    <section id="authSection">
+        <h1>Routine Shift</h1>
+        <p>Enter your email address</p>
+        <form action="" id="emailForm">
+            <input type="email" name="" id="participant-email" placeholder="you@example.com" required>
+            <button type="submit">Login</button>
+        </form>
+
+        <p id="authMessage"></p>
+    </section>
+
+    <!-- SHift section -->
+    <section id="shiftSection" hidden>
+        <h2>Pick your shift</h2>
+
+        <!-- shift box -->
+        <div id="box-grid" class="box-grid">
+            <!-- JS to generate box -->
+        </div>
+
+        <!-- picked info -->
+        <div id="selection-info">
+            <p id="selected-alphabet"></p>
+        </div>
+
+        <!-- submit -->
+        <button id="submit-selection" disabled>Submit</button>
+
+        <p id="raffle-message"></p>
+    </section>
+    <script type="module" src="js/firebase.js"></script>
+    <script type="module" src="js/participant.js"></script>
+</body>
+</html>

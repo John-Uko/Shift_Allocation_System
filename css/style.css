@@ -1,0 +1,185 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+    
+    
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f7fa;
+    color: #333;
+    padding: 20px;
+}
+
+h1, h2, h3 {
+    margin-bottom: 12px;
+}
+
+
+p {
+    margin-bottom: 10px;
+}
+
+
+button {
+    padding: 10px 16px;
+    border: none;
+    border-radius: 6px;
+    background-color: #ac0d0d;
+    color: #fff;
+    cursor: pointer;
+    font-size: 0.85em;
+}
+
+
+button:disabled {
+    background: #94a3b8;
+    cursor: not-allowed;
+}
+
+
+input {
+    padding: 10px;
+    border: 1px solid #ac0d0d;
+    border-radius: 6px;
+    width: 100%;
+}
+
+
+section {
+    max-width: 800px;
+    margin: auto;
+    background-color: #fc8c31;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
+
+
+/* ================= PARTICIPANT ================= */
+
+
+#authSection {
+    text-align: center;
+}
+
+
+#emailForm {
+    display: grid;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+
+#shiftSection {
+    margin-top: 30px;
+}
+
+
+.box-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+    gap: 15px;
+    margin: 20px 0;
+}
+
+
+.box {
+    background: #e5e7eb;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2em;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+
+.box:hover {
+    background: #ac0d0d;
+}
+
+
+.box.disabled {
+    opacity: 0.4;
+    pointer-events: none;
+}
+
+
+.box.selected {
+    background: #ac0d0d;
+    color: #fff;
+}
+
+
+#selection-info {
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+    
+    /* ================= ADMIN ================= */
+    
+    
+.admin-actions {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+    
+    
+.alphabet-editor {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
+    gap: 10px;
+    margin-bottom: 30px;
+}
+    
+    
+.alphabet-editor input {
+    text-align: center;
+    font-weight: bold;
+}
+
+#admin-login-form{
+    display: grid;
+    gap: 0.6em;
+}
+
+#logout-btn{
+    margin-top: 1em;
+}
+
+#submissions-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+#submissions-table tbody{
+    font-size: 0.75em;
+}    
+    
+#submissions-table th,
+#submissions-table td {
+    border: 1px solid #ac0d0d;
+    padding: 8px;
+    text-align: left;
+}
+    
+    
+#submissions-table th {
+    background: #fc8c31;
+}
+    
+    
+    /* ================= RESPONSIVE ================= */
+    
+    
+@media (max-width: 600px) {
+    #email-form {
+        flex-direction: column;
+    }
+}

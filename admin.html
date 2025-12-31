@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashborad</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- admin login -->
+    <section id="admin-auth">
+        <h1>Admin Login</h1>
+
+        <form action="" id="admin-login-form">
+            <input type="email" name="" id="admin-email" placeholder="admin@example.com" required>
+            <button type="submit">Login</button>
+        </form>
+
+        <p id="admin-auth-message"></p>
+    </section>
+    
+    <!-- Admin DAshboard -->
+    <section id="admin-dashboard" hidden>
+        <h1>Shift Control Panel</h1>
+
+        <!-- Admin Actions -->
+        <div class="admin-actions">
+            <button id="randomize-btn">Randomize Alphabets</button>
+            <button id="new-cycle-btn">Start New Cycle</button>
+        </div>
+
+        <!-- Alphabets editor -->
+        <h3>Edit Alphabets</h3>
+        <div id="alphabet-editor" class="alphabet-editor">
+            <!-- JS to generate -->
+        </div>
+
+        <!-- SUbmissions view -->
+        <h3>Submitted Alphabets</h3>
+        <table id="submissions-table">
+            <thead>
+                <tr>
+                    <th>Email</th>
+                    <th>Alphabet</th>
+                    <th>Time</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Submitted alphabets to appear here -->
+            </tbody>
+        </table>
+        <button id="logout-btn">Logout</button>
+    </section>
+    <script type="module" src="js/firebase.js"></script>
+    <script type="module" src="js/admin.js"></script>
+</body>
+</html>
