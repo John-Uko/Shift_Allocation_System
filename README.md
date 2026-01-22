@@ -30,7 +30,7 @@ A real-time shift allocation application built with Firebase Firestore, enabling
 - Firestore data modeling
 
 ## Live Demo
-👉 (Add link after deployment)
+
 
 ## Screenshots
 ![Alt text](<demo_images/Screenshot_admin login.jpg>)

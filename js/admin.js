@@ -22,6 +22,7 @@ import { signOut } from
 "https://www.gstatic.com/firebasejs/12.7.0/firebase-auth.js";
 
 const auth = getAuth();
+const ADMIN_EMAIL = "hot-internalcontrol@myecurrencyng.com";
 
 // ---------------- DOM ----------------
 const adminAuthSection = document.getElementById("admin-auth");
@@ -58,6 +59,13 @@ adminLoginForm.addEventListener("submit", async (e) => {
 onAuthStateChanged(auth, async (user) => {
   if (!user) return;
 
+  if (user.email !== ADMIN_EMAIL) {
+    alert("❌ You are not authorized as admin.");
+    await signOut(auth);
+    location.reload();
+    return;
+  }
+
   adminAuthSection.hidden = true;
   adminDashboard.hidden = false;
 
@@ -65,6 +73,7 @@ onAuthStateChanged(auth, async (user) => {
   await loadAlphabetEditor();
   listenToSubmissions();
 });
+
 
 // ---------------- LOAD CURRENT CYCLE ----------------
 async function loadAdminConfig() {
