@@ -29,8 +29,8 @@ A real-time shift allocation application built with Firebase Firestore, enabling
 - Admin/participant role separation
 - Firestore data modeling
 
-## Live Demo
-
+## Live link
+ https://shift-poll.web.app
 
 ## Screenshots
 ![Alt text](<demo_images/Screenshot_admin login.jpg>)
